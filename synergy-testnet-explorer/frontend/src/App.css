@@ -1,0 +1,86 @@
+/* src/App.css */
+
+/* Global dark cyberpunk theme */
+body {
+  background-color: #010A26;
+  /* Deep dark blue */
+  color: #E0E8FF;
+  /* Soft glowing white-blue text */
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  z-index: -9999;
+}
+
+/* Glowing text effect */
+h1,
+h2,
+h3,
+a {
+  text-shadow: 0px 0px 10px rgba(0, 162, 255, 0.8);
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 14px;
+  margin-left: -15px;
+}
+
+
+
+
+
+/* Buttons */
+button {
+  background: linear-gradient(135deg, #003C7D, #00A2FF);
+  border: none;
+  padding: 12px 20px;
+  color: #E0E8FF;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0, 162, 255, 0.6);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px rgba(0, 162, 255, 1);
+}
+
+button:active {
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+/* Tables */
+.table-container {
+  background: rgba(0, 10, 50, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.table-container:hover {
+  box-shadow: 0px 0px 20px rgba(0, 162, 255, 0.6);
+  border: 2.5px solid rgba(0, 162, 255, 0.9);
+  transition: all 0.3s ease-in-out;
+}
+
+.table-container th,
+.table-container td {
+  padding: 10px;
+  border-bottom: 2.5px solid rgba(0, 162, 255, 0.3);
+}
+
+.table-container th {
+  background: rgba(0, 20, 60, 0.8);
+  color: #00A2FF;
+}
+
+.table-container tr:hover {
+  background: rgba(0, 20, 60, 0.5);
+}

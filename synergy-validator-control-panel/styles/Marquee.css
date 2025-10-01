@@ -1,0 +1,54 @@
+/* src/components/Marquee.css */
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee-scroll 55s linear infinite;
+}
+
+.marquee-item {
+  margin: 0 20px;
+  padding: 0 95px 0 95px;
+  display: flex;
+  align-items: center;
+}
+
+.pair {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.price {
+  margin-right: 10px;
+}
+
+.positive-change {
+  color: #4caf50;
+  /* Green for positive changes */
+}
+
+.negative-change {
+  color: #f44336;
+  /* Red for negative changes */
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}

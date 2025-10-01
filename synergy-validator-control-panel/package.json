@@ -1,0 +1,111 @@
+{
+  "name": "synergy-validator-control-panel",
+  "version": "1.0.0",
+  "description": "Synergy Network Validator Control Panel - Desktop application for managing Synergy validators",
+  "main": "main.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "concurrently \"npm run dev:react\" \"wait-on http://localhost:3000 && electron .\"",
+    "dev": "ELECTRON_IS_DEV=true concurrently \"npm run dev:react\" \"wait-on http://localhost:3000 && electron .\"",
+    "dev:react": "react-scripts start",
+    "build:react": "react-scripts build",
+    "build": "npm run build:react && electron-builder",
+    "build:win": "npm run build:react && electron-builder --win",
+    "build:mac": "npm run build:react && electron-builder --mac",
+    "build:linux": "npm run build:react && electron-builder --linux",
+    "dist": "npm run build",
+    "dist:win": "npm run build:win",
+    "dist:mac": "npm run build:mac",
+    "dist:linux": "npm run build:linux"
+  },
+  "keywords": [
+    "synergy",
+    "blockchain",
+    "validator",
+    "electron",
+    "desktop"
+  ],
+  "author": "Synergy Network",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "electron": "^25.0.0",
+    "electron-builder": "^24.0.0",
+    "react-scripts": "^5.0.1",
+    "wait-on": "^9.0.1"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.13.0",
+    "@mui/material": "^5.13.0",
+    "axios": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.0",
+    "recharts": "^2.6.0"
+  },
+  "build": {
+    "appId": "com.synergynetwork.validatorcontrolpanel",
+    "productName": "Synergy Validator Control Panel",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "assets/**/*",
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

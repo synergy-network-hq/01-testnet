@@ -1,0 +1,93 @@
+./
+├── backend/
+│   └── app.py
+├── config-overrides.js
+├── .env
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── public/
+│   ├── index.html
+│   ├── pqc/
+│   │   └── dilithium_wasm.js
+│   ├── pqc.py
+│   └── token_ledger.json
+├── README.md
+├── removed/
+│   ├── bg.html
+│   ├── CreateWalletWizard.jsx
+│   ├── ImportWalletWizard.jsx
+│   ├── index.html
+│   ├── rainbow.html
+│   └── UnifiedWalletWizard.jsx
+└── src/
+    ├── api/
+    │   └── pqcCrypto.js
+    ├── App.jsx
+    ├── assets/
+    ├── components/
+    │   ├── MainContent.jsx
+    │   ├── PQCWallet.jsx
+    │   ├── Section.jsx
+    │   ├── Sidebar.jsx
+    │   ├── walletDetails.jsx
+    │   └── walletList.js
+    ├── hooks/
+    │   └── useWallets.js
+    ├── index.jsx
+    ├── modals/
+    │   ├── Modal.jsx
+    │   └── umaWalletWizard.jsx
+    ├── pages/
+    │   ├── Dashboard.jsx
+    │   └── LoginPage.jsx
+    ├── pqc/
+    │   ├── dilithium.js
+    │   └── dilithium_wasm.js
+    ├── styles/
+    │   ├── global.css
+    │   ├── main.css
+    │   └── WalletWizard.css
+    └── utils/
+        ├── address.js
+        ├── bip39utils.js
+        ├── crypto.js
+        ├── hexUtils.jsx
+        ├── pqc.js
+        ├── synergyAddress.jsx
+        └── umaAddresses.js
+
+15 directories, 43 files
+
+
+public/index.html
+
+removed/CreateWalletWizard.jsx
+
+removed/ImportWalletWizard.jsx
+
+removed/UnifiedWalletWizard.jsx
+
+src/App.jsx
+
+src/components/MainContent.jsx
+
+src/components/PQCWallet.jsx
+
+src/components/Section.jsx
+
+src/components/Sidebar.jsx
+
+src/components/walletDetails.jsx
+
+src/components/walletList.js
+
+src/index.jsx
+
+src/modals/Modal.jsx
+
+src/modals/umaWalletWizard.jsx
+
+src/pages/Dashboard.jsx
+
+src/pages/LoginPage.jsx

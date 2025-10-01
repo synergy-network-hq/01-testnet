@@ -1,0 +1,213 @@
+/* === Layout Root === */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(75deg, #000000, #0c0518, #0e051d);
+  color: #e5e5e5;
+  font-family: 'Inter', sans-serif;
+  overflow: auto;
+}
+
+/* === Page Layout === */
+.docs-page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.docs-page-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* === Sidebar === */
+.docs-sidebar {
+  width: 300px;
+  background: #111827;
+  padding: 20px;
+  border-right: 1px solid #2d2d2d;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-category {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-category-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #93c5fd;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+.sidebar-category ul {
+  list-style: none;
+  padding-left: 10px;
+  margin-top: 0.5rem;
+}
+
+.sidebar-category li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-category a {
+  color: #3b82f6;
+  text-decoration: none;
+  display: block;
+  padding: 4px 2px;
+  word-break: break-word;
+  transition: color 0.2s ease;
+}
+
+.sidebar-category a.active-link {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #60a5fa;
+}
+
+/* === Search Bar === */
+.doc-searchbar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.doc-searchbar input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+}
+
+
+
+/* === Main Content === */
+.docs-content-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: #1a1a1a;
+}
+
+/* === Viewer === */
+.doc-viewer {
+  flex: 1;
+  overflow-y: auto;
+  background: #111827;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  color: #e5e5e5;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.doc-updated {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* === Markdown Styling === */
+.doc-viewer h1,
+.doc-viewer h2,
+.doc-viewer h3,
+.doc-viewer h4 {
+  color: #93c5fd;
+  margin-top: 1.5rem;
+}
+
+.doc-viewer p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.doc-viewer ul,
+.doc-viewer ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.doc-viewer code {
+  background-color: #1f2937;
+  color: #eab308;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.doc-viewer pre {
+  background-color: #0f172a;
+  color: #f8f8f2;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.doc-viewer table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.doc-viewer th,
+.doc-viewer td {
+  border: 1px solid #374151;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.doc-viewer th {
+  background-color: #1f2937;
+  color: #e5e5e5;
+}
+
+.doc-viewer blockquote {
+  border-left: 4px solid #60a5fa;
+  padding-left: 1rem;
+  color: #9ca3af;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+/* === Transitions === */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Footer === */
+footer {
+  position: relative;
+  width: 100%;
+  padding: 1rem 2rem;
+  margin-top: auto;
+  background: #0f0f0f;
+  color: #ccc;
+  text-align: center;
+  font-size: 0.85rem;
+  border-top: 1px solid #2d2d2d;
+}

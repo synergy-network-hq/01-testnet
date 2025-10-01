@@ -1,0 +1,97 @@
+.sidebar-button,
+.wizard-btn,
+.chakra-button,
+.doc-search-button {
+  margin: 10px 0 12px 0;
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  padding: 10px;
+  text-decoration: none;
+  color: #ffffff9a;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 3px 0 rgba(209, 209, 209, 0.3);
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-shadow: 2px 2px 3px black;
+  overflow: hidden;
+}
+
+.sidebar-button::before,
+.wizard-btn::before,
+.chakra-button::before,
+.doc-search-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 17px;
+  background: var(--rainbow-gradient);
+  opacity: 0;
+  transition: opacity 0.4s ease, border 0.4s ease;
+  z-index: -1;
+}
+
+.sidebar-button:hover::before,
+.wizard-btn:hover::before,
+.chakra-button:hover::before,
+.doc-search-button:hover::before {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.sidebar-button:after,
+.wizard-btn:after,
+.chakra-button:after,
+.doc-search-button:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .40), transparent);
+  transition: 0.5s;
+}
+
+.sidebar-button:active,
+.wizard-btn:active,
+.chakra-button:active,
+.doc-search-button:active {
+  box-shadow: 0 1px 0 rgba(209, 209, 209, 0.5);
+  transform: translateY(3px);
+}
+
+.sidebar-button:hover,
+.wizard-btn:hover,
+.chakra-button:hover,
+.doc-search-button:hover {
+  box-shadow:
+    0 0 12px 4px rgba(255, 255, 255, 0.7),
+    0 3px 0 rgba(209, 209, 209, 0.5);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 1);
+}
+
+.sidebar-button:active,
+.wizard-btn:active,
+.chakra-button:active,
+.doc-search-button:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 0 6px 2px rgba(255, 255, 255, 0.5),
+    0 1px 0 rgba(209, 209, 209, 0.5);
+}
+
+.sidebar-button:hover:after,
+.wizard-btn:hover:after,
+.chakra-button:hover:after,
+.doc-search-button:hover:after {
+  box-shadow: 0 3px 0 rgba(209, 209, 209, 0.5);
+  left: 100%;
+}

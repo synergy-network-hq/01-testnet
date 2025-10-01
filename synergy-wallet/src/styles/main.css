@@ -1,0 +1,25 @@
+/* styles/main.css */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 128, 128, 0.86); /* Teal color from global.scss */
+  z-index: 1000; /* Higher z-index to cover sidebar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: rgba(36, 21, 54, 0.95);
+  padding: 44px 36px 36px 36px;
+  border-radius: 20px;
+  box-shadow: 0 4px 32px #0009;
+  min-width: 340px;
+  min-height: 180px;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  border: 1.3px solid rgba(255, 255, 255, 0.15);
+}

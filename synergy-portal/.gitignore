@@ -1,0 +1,79 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+.cache/
+.next/
+out/
+
+# Rust (Cargo)
+/target/
+/**/target/
+**/*.rs.bk
+**/*.rlib
+Cargo.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+.env
+.venv
+*.egg-info/
+.eggs/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+
+# Hardhat/Ethereum artifacts
+artifacts/
+cache/
+typechain/
+coverage/
+*.log
+.env.local
+.env.*.local
+
+# Electron
+out/
+*.asar
+
+# Log files
+*.log
+logs/
+debug.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Misc
+*.tgz
+*.zip
+*.tmp
+*.pid
+*.pid.lock
+
+# Synergy Project Specific (recommended additions)
+.synergy_secrets/
+testnet/logs/
+mainnet/logs/
+faucet/logs/
+faucet/test_tokens.json
+utility_tool/output/
+explorer/tmp_data/

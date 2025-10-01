@@ -1,0 +1,39 @@
+[package]
+name = "synergy-testnet"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Core dependencies from workspace
+rocksdb = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+bincode = { workspace = true }
+hex = { workspace = true }
+sha3 = { workspace = true }
+lazy_static = { workspace = true }
+
+# Additional dependencies
+md5 = "0.7.0"
+reqwest = { version = "0.12.15", features = ["blocking", "json"] }
+toml = "0.8.20"
+rmp-serde = "1.3.0"
+serde_cbor = "0.11.2"
+base64 = "0.22.1"
+serde_yaml = "0.9.34"
+blake3 = "1.8.1"
+k256 = { version = "0.13", features = ["sha256"] }
+chrono = "0.4"
+
+# Post-Quantum Cryptography
+pqcrypto = { workspace = true }
+pqcrypto-traits = { workspace = true }
+
+[lib]
+name = "synergy_testnet"
+path = "lib.rs"
+
+[[bin]]
+name = "synergy-testnet"
+path = "main.rs"

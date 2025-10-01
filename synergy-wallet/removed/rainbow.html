@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Glass Button – Linear Rainbow Glow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      background: #11131a;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .glass-btn-3d {
+      position: relative;
+      padding: 1.15rem 2.7rem;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.11);
+      border-radius: 18px;
+      border: 2px solid rgba(255, 255, 255, 0.30);
+      box-shadow:
+        0 2px 12px 0 rgba(0, 0, 0, 0.18),
+        0 4px 24px 0 rgba(40, 80, 255, 0.06),
+        0 1.5px 0 0 rgba(255, 255, 255, 0.14) inset,
+        0 4px 24px 0 rgba(255, 255, 255, 0.07) inset;
+      backdrop-filter: blur(14px) saturate(1.5);
+      background-clip: padding-box;
+      overflow: visible;
+      cursor: pointer;
+      outline: none;
+      transition:
+        color 0.17s,
+        box-shadow 0.21s cubic-bezier(.42, 0, .58, 1),
+        border 0.19s,
+        transform 0.12s cubic-bezier(.42, 0, .58, 1),
+        background 0.18s;
+    }
+
+    /* Subtle glass highlight */
+    .glass-btn-3d::before {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      left: 13%;
+      top: 13%;
+      width: 74%;
+      height: 26%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.06) 95%);
+      border-radius: 100px;
+      filter: blur(0.8px);
+      z-index: 2;
+      opacity: 0.72;
+      transition: opacity 0.23s;
+    }
+
+    /* Rainbow linear gradient glow */
+    .glass-btn-3d::after {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      z-index: 0;
+      inset: -13px;
+      border-radius: 28px;
+      opacity: 0;
+      background: linear-gradient(110deg,
+          #ff000055,
+          #ff800055,
+          #00ba0c55,
+          #ffd50055,
+          #002fed55,
+          #bb00ff55);
+      filter: blur(13px) brightness(1.23) saturate(1.5);
+      box-shadow: 0 0 48px 6px transparent;
+      transition: opacity 0.28s, filter 0.18s;
+      z-index: -1;
+    }
+
+    .glass-btn-3d:hover,
+    .glass-btn-3d:focus-visible {
+      border: 2.5px solid rgba(255, 255, 255, 0.9);
+      box-shadow:
+        0 2px 18px 0 rgba(0, 0, 0, 0.24),
+        0 8px 32px 0 rgba(120, 180, 255, 0.09),
+        0 3px 0 0 rgba(255, 255, 255, 0.24) inset,
+        0 6px 28px 0 rgba(255, 255, 255, 0.09) inset;
+      background: rgba(255, 255, 255, 1);
+      z-index: 3;
+      color: #181818;
+      text-shadow:
+        0 2px 6px #fff,
+        0 1px 0px #fff,
+        0 0px 14px #fff;
+    }
+
+    .glass-btn-3d:hover::after,
+    .glass-btn-3d:focus-visible::after {
+      opacity: 1;
+    }
+
+    .glass-btn-3d:active {
+      transform: translateY(3px) scale(0.97);
+      box-shadow:
+        0 0.5px 4px 0 rgba(0, 0, 0, 0.18),
+        0 1.5px 0 0 rgba(255, 255, 255, 0.10) inset;
+      background: rgba(255, 255, 255, 0.14);
+      border: 2.5px solid rgba(255, 255, 255, 0.25);
+      color: #222;
+      text-shadow:
+        0 1px 5px #fff,
+        0 0px 7px #fff;
+    }
+
+    .glass-btn-3d:active::after {
+      opacity: 0.65;
+      filter: blur(7px) brightness(1.1);
+    }
+
+    .glass-btn-3d:focus-visible {
+      outline: 2.5px solid #fff;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="glass-btn-3d">Ecosystem</button>
+</body>
+
+</html>

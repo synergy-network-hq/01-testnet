@@ -1,0 +1,19 @@
+[consensus]
+algorithm = "Proof of Synergy"
+block_time = 5
+stake_required = "1000 SYN"
+validators = 21
+slashing_penalty = "0.05"
+reward_per_block = "10 SYN"
+
+tx_pool_limit = 10000
+minimum_stake_period = "30 days"
+
+[consensus.parameters]
+epoch_length = 30000
+checkpoint_interval = 1000
+finality_threshold = "2/3"
+
+[consensus.security]
+sybil_resistance = true
+validator_rotation = true

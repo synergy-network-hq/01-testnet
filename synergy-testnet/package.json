@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "aegis-pqvm": "^1.2.1"
+  }
+}

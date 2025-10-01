@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Synergy Network - Ecosystem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0D1117;
+      color: #E6EDF3;
+    }
+
+    .glassmorphism {
+      background: rgba(16, 23, 39, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+    }
+
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #C9D1D9;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .sidebar-item:hover {
+      background-color: rgba(33, 150, 243, 0.1);
+      color: #58A6FF;
+    }
+
+    .sidebar-item.active {
+      background-color: #1F6FEB;
+      color: white;
+    }
+
+    .sidebar-item .material-icons {
+      margin-right: 12px;
+    }
+
+    .card {
+      background: rgba(22, 30, 47, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .card-icon-container {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: #1F6FEB;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #0D5BDC;
+    }
+
+    .btn-secondary {
+      background: linear-gradient(90deg, #21D4FD 0%, #B721FF 100%);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      opacity: 0.9;
+    }
+
+    .btn-tertiary {
+      background: linear-gradient(90deg, #00F260 0%, #0575E6 100%);
+      color: white;
+    }
+
+    .btn-tertiary:hover {
+      opacity: 0.9;
+    }
+
+    .btn-quaternary {
+      background: linear-gradient(90deg, #FDC830 0%, #F37335 100%);
+      color: white;
+    }
+
+    .btn-quaternary:hover {
+      opacity: 0.9;
+    }
+
+    .hex-bg {
+      position: absolute;
+      opacity: 0.05;
+      z-index: -1;
+    }
+
+    .hex-bg-1 {
+      width: 300px;
+      height: 300px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpolygon points='50,0 100,25 100,75 50,100 0,75 0,25' fill='%231F6FEB'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      top: 10%;
+      left: 5%;
+      filter: blur(50px);
+    }
+
+    .hex-bg-2 {
+      width: 400px;
+      height: 400px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpolygon points='50,0 100,25 100,75 50,100 0,75 0,25' fill='%2358A6FF'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      bottom: 5%;
+      right: 10%;
+      filter: blur(70px);
+    }
+
+    .glow-effect {
+      box-shadow: 0 0 20px rgba(31, 111, 235, 0.5), 0 0 40px rgba(31, 111, 235, 0.3);
+    }
+
+    :root {
+      --primary-gradient: linear-gradient(90deg, #ff1b6b, #45caff, #5bffb0, #ffe14c, #ff1b6b);
+    }
+
+    .gradient-glow {
+      box-shadow:
+        0 0 16px 4px #fff,
+        0 0 40px 6px var(--primary-gradient);
+      /* Use a workaround for multi-color shadows, or use filter: drop-shadow with SVG/PNG masks for more complex effects */
+    }
+
+    .rainbow-text {
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+    .gradient-border {
+      border: 2px solid transparent;
+      border-image: var(--primary-gradient) 1;
+    }
+
+  </style>
+</head>
+
+<body class="flex h-screen">
+  <div class="hex-bg hex-bg-1"></div>
+  <div class="hex-bg hex-bg-2"></div>
+  <aside class="w-64 p-6 flex flex-col justify-between glassmorphism m-4 mr-2">
+    <div>
+      <div class="flex items-center mb-10">
+        <img alt="Synergy Network Logo" class="h-10 w-10 mr-3"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDISVufQb42CXZ4SUUhZzQFBYzC5biQIDhFqIaHsMSCLSm-JhJ7ORbIkL-64AIYCIbwlCOmuPpu8yYLjOqyledypxLlTaY559eFqfemW-HC-Ro9YVf5gnZz43Hsrz9UzVBy1YlL6vspr2chy1EFSC3jDNx0TDL4e53re5nkxrVsUYwhGzipyOwSDvrb14DtoMoZd1dJRALElhabfu6w2PO_fGQSpGy_YZv-XzdliO1coqXnahD0KwLNjuz-z_O7BnOQ-BBmVK7a4wRs" />
+        <h1 class="text-2xl font-bold text-white">Synergy</h1>
+      </div>
+      <nav>
+        <a class="sidebar-item" href="#">
+          <span class="material-icons">home</span>
+          Homepage
+        </a>
+        <a class="sidebar-item" href="#">
+          <span class="material-icons">account_balance_wallet</span>
+          Wallet Dashboard
+        </a>
+        <a class="sidebar-item" href="#">
+          <span class="material-icons">explore</span>
+          Network Explorer
+        </a>
+        <a class="sidebar-item" href="#">
+          <span class="material-icons">code</span>
+          Developer Portal
+        </a>
+        <a class="sidebar-item" href="#">
+          <span class="material-icons">gavel</span>
+          Governance / DAO
+        </a>
+        <a class="sidebar-item" href="#">
+          <span class="material-icons">menu_book</span>
+          Docs/Knowledge Base
+        </a>
+        <a class="sidebar-item" href="#">
+          <span class="material-icons">bar_chart</span>
+          Network Stats &amp; Validators
+        </a>
+        <a class="sidebar-item active" href="#">
+          <span class="material-icons">hub</span>
+          Ecosystem
+        </a>
+        <a class="sidebar-item" href="#">
+          <span class="material-icons">people</span>
+          Community
+        </a>
+        <button class="btn gradient-glow">Learn More</button>
+
+        <a class="sidebar-item" href="#">
+          <span class="material-icons">shield</span>
+          Security Status
+        </a>
+        <a class="sidebar-item" href="#">
+          <span class="material-icons">settings</span>
+          Account Settings
+        </a>
+      </nav>
+    </div>
+    <button class="sidebar-item w-full justify-center text-red-400 hover:bg-red-500/10 hover:text-red-300">
+      <span class="material-icons">logout</span>
+      Logout
+    </button>
+  </aside>
+  <main class="flex-1 p-8 overflow-y-auto">
+    <header class="flex justify-between items-center mb-8">
+      <div>
+        <h2 class="text-4xl font-bold text-white">Ecosystem</h2>
+        <p class="text-gray-400">Explore projects and partners building on Synergy Network.</p>
+      </div>
+      <div class="flex items-center space-x-4">
+        <div class="relative">
+          <span class="material-icons absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">search</span>
+          <input
+            class="pl-10 pr-4 py-2 rounded-lg border border-gray-700 bg-slate-800/50 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-gray-300 placeholder-gray-500"
+            placeholder="Search ecosystem..." style="min-width: 300px;" type="text" />
+        </div>
+        <button class="p-2 rounded-full hover:bg-slate-700/50">
+          <span class="material-icons text-gray-400">notifications</span>
+        </button>
+      </div>
+    </header>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="card-icon-container bg-gradient-to-br from-teal-400 to-cyan-600">
+              <img alt="QuantumLeap DeFi icon" class="w-7 h-7"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAdR2OMw0E5JXCWjOUwgoywOtCJZitf-ZXWvEPjrQc9eyVpxhVsGKi2coHU03Px0zwMCqFip5CuS-2cERuShS4DXvLL1U22ZlyYhSBJnyrCEi4yb8g7idPesgOW6XMszP7XQbhIXqJWDMRepq1a3m0iHmOuKMJ-C-oQZzhtdJRjCl0q4ZYJ_-_e3jBHyZCagHWx3Q3HIAHQXeCNHfIx7YZ0MW45Ggt_24jjzIYqhJxYonmT-ykSkrt7QQ_IJKsfb28GHcNsy_VP3hR" />
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">QuantumLeap DeFi</h3>
+              <p class="text-sm text-cyan-400">Decentralized Finance Platform</p>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">Revolutionizing lending and borrowing with post-quantum
+            secure smart contracts on Synergy.</p>
+          <div class="flex justify-between text-xs text-gray-500 mb-6">
+            <span><span class="material-icons text-sm mr-1 align-bottom">group</span>Community Size: 15K+</span>
+            <span><span class="material-icons text-sm mr-1 align-bottom">person</span>Active Users: 5K+</span>
+          </div>
+        </div>
+        <button class="btn btn-primary">Learn More</button>
+      </div>
+      <div class="card">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="card-icon-container bg-gradient-to-br from-green-400 to-emerald-600">
+              <img alt="VeriChain NFTs icon" class="w-7 h-7"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc3FrkDrRAPJf-VKjQPr1jg7K-dft0-MmlQqYvq_UI-EgBb5hs9l9HUiFiWVTTA9FBeE55fde0lZDgIqa8uRzit92PArWoHYMGa6-NeVLATUWrf3S75LpwBWe31iMryOphl1PtR_4aEbRZcBM7oqNTzkPmXP1yJKLZ7v7rCgb32a7RP6BzlUrRY7lZmtNg6RE3nLJvAtZQHwg8bNNpgqvtthEoLcTart8x_fUIAMDgbUQb6kSyq3PY6iBEYyB11uYImYao3Z3HhZnX" />
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">VeriChain NFTs</h3>
+              <p class="text-sm text-emerald-400">Secure NFT Marketplace</p>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">A next-gen NFT marketplace leveraging Synergy's
+            verifiable randomness for fair minting and unique digital assets.</p>
+          <div class="flex justify-between text-xs text-gray-500 mb-6">
+            <span><span class="material-icons text-sm mr-1 align-bottom">collections</span>Total NFTs: 50K+</span>
+            <span><span class="material-icons text-sm mr-1 align-bottom">insights</span>Volume: $2M+</span>
+          </div>
+        </div>
+        <button class="btn btn-tertiary">Explore NFTs</button>
+      </div>
+      <div class="card">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="card-icon-container bg-gradient-to-br from-purple-400 to-indigo-600">
+              <img alt="Synergy Bridge icon" class="w-7 h-7"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTQxro94B7JosTMAMQ70eG3C1lG0Rb8BSM6tKYqJUIxD5SoAU0MTLTb-k0BrGq0tBl8a6ocy05F7Wx50K52X_SknTGobDNtOWqLofhAgf4AZ2lbCN38nMDuv7KwkDE7cQaBzdLjcHMdnGSfvziUfF5FqSikJQiNXxWiiy1d0gSKOQEfRv-5JOit0BNUj97E79nrgtM-mBf5XldkvBgp3kQ-XBoGfogvBDRL34IiNQquQxIhagITTbP_D7XWciiZ7Jm9AG8tRadJXcf" />
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">Synergy Bridge</h3>
+              <p class="text-sm text-indigo-400">Cross-Chain Interoperability</p>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">Seamlessly transfer assets and data across multiple
+            blockchains, powered by Synergy's core interoperability features.</p>
+          <div class="flex justify-between text-xs text-gray-500 mb-6">
+            <span><span class="material-icons text-sm mr-1 align-bottom">link</span>Supported Chains: 5+</span>
+            <span><span class="material-icons text-sm mr-1 align-bottom">security</span>Security Level: Top-Tier</span>
+          </div>
+        </div>
+        <button class="btn btn-secondary">Use Bridge</button>
+      </div>
+      <div class="card">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="card-icon-container bg-gradient-to-br from-lime-400 to-green-600">
+              <img alt="TimeLock Vaults icon" class="w-7 h-7"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxP0m3sZAO8aBucAgKwqJ-8pxbJV11-cC7PmRzmAj2-RLcT2UJiS3C2fye2ZAIzJ8kQ83oVaiojQ3co9uQ-Nhsav9RVamirUVl8BhjnNaQPJqqG2il3VU9h6iBLOfb8Ps69HI6PZ7ADigxgfOqc3AIxBLn7oggxQjflPw5E4xPNfQpj9z1W5xJfycSzBtzID7ySqNuyZVolse4rNvo8OtZQDM5IbUKnoilGSN0CelkumkyZAj6nLsV6hIrgpgYySCrfWI5TKiz0XV_" />
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">TimeLock Vaults</h3>
+              <p class="text-sm text-green-400">Secure Asset Storage</p>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">Store your digital assets with time-lock encryption,
+            ensuring they are only accessible at predefined future dates.</p>
+          <div class="flex justify-between text-xs text-gray-500 mb-6">
+            <span><span class="material-icons text-sm mr-1 align-bottom">timer</span>Max Lock: 100 Years</span>
+            <span><span class="material-icons text-sm mr-1 align-bottom">enhanced_encryption</span>Encryption: AES-256
+              &amp; PQ</span>
+          </div>
+        </div>
+        <button class="btn btn-tertiary">Create Vault</button>
+      </div>
+      <div class="card">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="card-icon-container bg-gradient-to-br from-amber-400 to-orange-600">
+              <img alt="Synergy DAO Suite icon" class="w-7 h-7"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvNrU6DUX-Xob_w291uRan_l6lBl3hnZWZLZ-H4Jp1-OpEu8vEGAWqgACfPba5me2TI8WGG-3bvUe2zGGk-bg2bisgSm3sPBpyc-lLq2_PR-WS9eWyXkkAQxy29AjCF4HCod-l6nYZSmPoJdgjofeqbCyuKJAT1LmifmjJgHJncXQGKTVpApf_2xsStKWXxRXEv_N2FHAnnYcOmssIwDANP5HUiQycVPqtPd9xVoMQXiCzNiiNi2KjYY4l3ovhv6tJtrCpvX7Th_ow" />
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">Synergy DAO Suite</h3>
+              <p class="text-sm text-orange-400">Governance Tools</p>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">A comprehensive suite of tools for DAOs built on
+            Synergy, enabling transparent and secure on-chain governance.</p>
+          <div class="flex justify-between text-xs text-gray-500 mb-6">
+            <span><span class="material-icons text-sm mr-1 align-bottom">how_to_vote</span>Proposals: 250+</span>
+            <span><span class="material-icons text-sm mr-1 align-bottom">groups</span>Members: 8K+</span>
+          </div>
+        </div>
+        <button class="btn btn-quaternary">Explore DAOs</button>
+      </div>
+      <div class="card">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="card-icon-container bg-gradient-to-br from-pink-400 to-rose-600">
+              <img alt="Randomizer Oracle icon" class="w-7 h-7"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0M5UsggACAX2j0TfjBbNDxohYSQLP1ui-WdH9uwsolz3DkNLZhNlmZgA5O1eYVN_oYtMe2LFd0iODJbxGjkqthA4MtkrMjnqya_1o-UosbtSnjhR7pQPca2d2WJ0abO2YC0TJR4p0djXNGKsp_KHClTEt6qcSIwtZUmHtEuHVwr_FZROXuoE9HZ2EgvDL2axvoAo83Ke-dUyfDXhDZf4GYrZTM6lp4npsSNxh9OnDVmc_TE3Fgb3AWBrEpWuaAJYue_k3mLi5BWiq" />
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">Randomizer Oracle</h3>
+              <p class="text-sm text-rose-400">Verifiable Randomness</p>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">Provides cryptographically secure and verifiable random
+            numbers for dApps, games, and lotteries on Synergy.</p>
+          <div class="flex justify-between text-xs text-gray-500 mb-6">
+            <span><span class="material-icons text-sm mr-1 align-bottom">sync_alt</span>Requests/Day: 1M+</span>
+            <span><span class="material-icons text-sm mr-1 align-bottom">verified_user</span>Security:
+              Quantum-Resistant</span>
+          </div>
+        </div>
+        <button class="btn" style="background: linear-gradient(90deg, #EC4899 0%, #F472B6 100%); color:white;">Integrate
+          Oracle</button>
+      </div>
+    </div>
+    <div class="mt-12 p-10 glassmorphism text-center glow-effect">
+      <h3 class="text-3xl font-bold text-white mb-4">Join the Synergy Ecosystem</h3>
+      <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Are you building a project that leverages cutting-edge blockchain
+        technology? Showcase your innovation on the Synergy Network.</p>
+      <button class="btn btn-primary inline-flex items-center">
+        <span class="material-icons mr-2">add_circle_outline</span>
+        Submit Your Project
+      </button>
+    </div>
+  </main>
+
+</body>
+
+</html>

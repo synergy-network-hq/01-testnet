@@ -1,0 +1,38 @@
+# Ignore node_modules and dependency directories
+node_modules/
+target/
+target 2/
+data/
+
+# Ignore build artifacts
+*.o
+*.so
+*.a
+*.dylib
+*.dll
+*.exe
+
+# Ignore Rust Cargo build files
+Cargo.lock
+
+# Ignore temporary files
+*.log
+*.tmp
+*.swp
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore Docker-related files
+docker-compose.override.yml
+.env
+
+# Ignore database files
+db.sqlite
+*.db
+
+# Ignore compiled Solidity artifacts
+artifacts/
+cache/
+
+target/

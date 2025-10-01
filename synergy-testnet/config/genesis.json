@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "network": "Synergy Testnet",
+    "version": "1.0.0",
+    "description": "Synergy Network Testnet Genesis Block",
+    "dateGenerated": "2024-04-14T00:00:00Z"
+  },
+  "config": {
+    "chainId": 7963749,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "istanbulBlock": 0,
+    "muirGlacierBlock": 0,
+    "berlinBlock": 0,
+    "londonBlock": 0,
+    "arrowGlacierBlock": 0,
+    "grayGlacierBlock": 0,
+    "mergeForkBlock": 0,
+    "shanghaiTime": 0,
+    "cancunTime": 0,
+    "synergyConsensus": {
+      "algorithm": "Proof of Synergy",
+      "parameters": {
+        "blockTime": 5,
+        "epoch": 30000,
+        "validatorClusterSize": 7,
+        "synergyScoreDecayRate": 0.05,
+        "vrfEnabled": true,
+        "vrfSeedEpochInterval": 1000,
+        "maxSynergyPointsPerEpoch": 100,
+        "maxTasksPerValidator": 10,
+        "rewardWeighting": {
+          "taskAccuracy": 0.5,
+          "uptime": 0.3,
+          "collaboration": 0.2
+        },
+        "addressEncoding": "Bech32m",
+        "hashAlgorithm": "SHA3-256",
+        "keyScheme": "Dilithium-3",
+        "prefixOptions": ["sYnQ", "sYnU", "sYnTW"],
+        "addressLength": 41,
+        "identitySystem": "UMA + SNS",
+        "crossChainSupport": ["Ethereum", "Solana", "Cosmos", "Bitcoin", "Polkadot", "Polygon"],
+        "governanceEnabled": true
+      }
+    }
+  },
+  "difficulty": "0x1",
+  "gasLimit": "0x47b760",
+  "alloc": {
+    "sYnQ1zxy8qhj4j59xp5lwkwpd5qws9aygz8pl9m3kmjx3": {
+      "balance": "1000000000000000000000"
+    },
+    "sYnQ1ffzcyq7l0sw7v9fhrx2wdvxxzv9q5mj3ehd6yl3e": {
+      "balance": "250000000000000000000"
+    },
+    "sYnU1z08h2k6c4gzf0q88dqgwhsm47m52ccqluwqmn0vz": {
+      "balance": "250000000000000000000"
+    }
+  },
+    "validators": {
+    "initialValidators": [
+      {
+        "address": "sYnQ1ffzcyq7l0sw7v9fhrx2wdvxxzv9q5mj3ehd6yl3e",
+        "pubKey": "8a3f7a9e5c3b2d1c8f9a7b6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f",
+        "weight": 1000
+      },
+      {
+        "address": "sYnU1v3smghwdd2zj7vpgkx0fn3cf0k57eq7hqufup0tp",
+        "pubKey": "9b4d8a6c2e5f7d3a1b0c8f9e7d6c5b4a3f2e1d0c9b8a7e6d5c4b3a2f1e0d9c8b",
+        "weight": 1000
+      },
+      {
+        "address": "sYnQ1uhf2zhq3rxtjqsc9qxyftu9v4kpa0zw8d7uux7g4",
+        "pubKey": "a0e1d2c3b4a59687f6e5d4c3b2a1908f7e6d5c4b3a291827364554433221100f",
+        "weight": 1000
+      }
+    ]
+  }
+}

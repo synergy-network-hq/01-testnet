@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 982d904c981c7c0ba583be993217f981ec204075 Justin Hutzler <hootzluh@gmail.com> 1740063206 -0600	commit (initial): initial commit
+982d904c981c7c0ba583be993217f981ec204075 982d904c981c7c0ba583be993217f981ec204075 Justin Hutzler <hootzluh@gmail.com> 1740063218 -0600	Branch: renamed refs/heads/main to refs/heads/main
+982d904c981c7c0ba583be993217f981ec204075 1fb57461bcd81aade8be4f1c914bb696630a1141 Justin Hutzler <hootzluh@gmail.com> 1740197518 -0600	commit: updated backend
+1fb57461bcd81aade8be4f1c914bb696630a1141 9f36da3cecfd7f1aa3d5f5e8906c8ddce645143a Justin Hutzler <hootzluh@gmail.com> 1740206499 -0600	commit: modified files
+9f36da3cecfd7f1aa3d5f5e8906c8ddce645143a 069b6df4af9739f316868a8cc9961674fca573f9 Justin Hutzler <hootzluh@gmail.com> 1740221896 -0600	commit: Began building frontend
+069b6df4af9739f316868a8cc9961674fca573f9 eec5a07dfdad65d1395df88450e890e0e5f22321 Justin Hutzler <hootzluh@gmail.com> 1740222662 -0600	commit: connecting front and back ends
+eec5a07dfdad65d1395df88450e890e0e5f22321 3cdb955f85b74927e0a939de15b02efa6e2bf157 Justin Hutzler <hootzluh@gmail.com> 1740260733 -0600	commit: Updated Frontend
+3cdb955f85b74927e0a939de15b02efa6e2bf157 c2ca4fb597fa68d1bffdad9843829fc791bc8daa Justin Hutzler <hootzluh@gmail.com> 1740478261 -0600	commit: Adding new site theme
+c2ca4fb597fa68d1bffdad9843829fc791bc8daa 270c4e5c42ac95382fa77874b0faba8168b5beda Justin Hutzler <hootzluh@gmail.com> 1740527233 -0600	commit: Added TS Config file
+270c4e5c42ac95382fa77874b0faba8168b5beda 58f9aaecfae53abe8b8e82d9adc4358cf60c973b Justin Hutzler <hootzluh@gmail.com> 1740808345 -0600	commit: updated layout

@@ -1,0 +1,278 @@
+{
+  "Getting-Started": [
+    {
+      "title": "Creating Wallet",
+      "slug": "creating_wallet"
+    },
+    {
+      "title": "First Transaction",
+      "slug": "first_transaction"
+    },
+    {
+      "title": "Introduction Synergy",
+      "slug": "introduction_synergy"
+    },
+    {
+      "title": "Network Architecture",
+      "slug": "network_architecture"
+    },
+    {
+      "title": "Obtaining Syn Tokens",
+      "slug": "obtaining_syn_tokens"
+    }
+  ],
+  "Core-Concepts": [
+    {
+      "title": "Post Quantum Cryptography",
+      "slug": "post_quantum_crypto"
+    },
+    {
+      "title": "Proof Of Synergy",
+      "slug": "proof_of_synergy"
+    },
+    {
+      "title": "Synergy Naming System",
+      "slug": "synergy_naming_system"
+    },
+    {
+      "title": "Synergy Points System",
+      "slug": "synergy_points_system"
+    },
+    {
+      "title": "Validator Clusters",
+      "slug": "validator_clusters"
+    }
+  ],
+  "Wallets-&-Tokens": [
+    {
+      "title": "Key Management",
+      "slug": "key_management"
+    },
+    {
+      "title": "Staking Guide",
+      "slug": "staking_guide"
+    },
+    {
+      "title": "Token Economics",
+      "slug": "token_economics"
+    },
+    {
+      "title": "Token Migration Guide",
+      "slug": "token_migration_guide"
+    },
+    {
+      "title": "Transaction Fees",
+      "slug": "transaction_fees"
+    },
+    {
+      "title": "Wallet User Guide",
+      "slug": "wallet_user_guide"
+    }
+  ],
+  "Node-Operations": [
+    {
+      "title": "Becoming Validator",
+      "slug": "becoming_validator"
+    },
+    {
+      "title": "Hardware Requirements",
+      "slug": "hardware_requirements"
+    },
+    {
+      "title": "Node Monitoring",
+      "slug": "node_monitoring"
+    },
+    {
+      "title": "Node Troubleshooting",
+      "slug": "node_troubleshooting"
+    },
+    {
+      "title": "Running Full Node",
+      "slug": "running_full_node"
+    }
+  ],
+  "Tutorials": [
+    {
+      "title": "Claim Test Tokens",
+      "slug": "claim_test_tokens"
+    },
+    {
+      "title": "Create Sns Mapping",
+      "slug": "create_sns_mapping"
+    },
+    {
+      "title": "Deploy Contract Testnet",
+      "slug": "deploy_contract_testnet"
+    },
+    {
+      "title": "Jsonrpc Curl Calls",
+      "slug": "jsonrpc_curl_calls"
+    },
+    {
+      "title": "Manage Validator Cluster",
+      "slug": "manage_validator_cluster"
+    },
+    {
+      "title": "Monitor Nodes Cli",
+      "slug": "monitor_nodes_cli"
+    },
+    {
+      "title": "Setup Wallet And Syn",
+      "slug": "setup_wallet_and_syn"
+    },
+    {
+      "title": "Staking Syn Rewards",
+      "slug": "staking_syn_rewards"
+    },
+    {
+      "title": "Uma Cross Chain Address",
+      "slug": "uma_cross_chain_address"
+    },
+    {
+      "title": "Vote Dao Proposal",
+      "slug": "vote_dao_proposal"
+    }
+  ],
+  "Governance": [
+    {
+      "title": "Dao Voting Analytics",
+      "slug": "dao_voting_analytics"
+    },
+    {
+      "title": "Emergency Rollback",
+      "slug": "emergency_rollback"
+    },
+    {
+      "title": "Governance Model",
+      "slug": "governance_model"
+    },
+    {
+      "title": "Governance Stress Test",
+      "slug": "governance_stress_test"
+    },
+    {
+      "title": "Proposal System",
+      "slug": "proposal_system"
+    },
+    {
+      "title": "Treasury Management",
+      "slug": "treasury_management"
+    },
+    {
+      "title": "Voting Mechanism",
+      "slug": "voting_mechanism"
+    }
+  ],
+  "Developer-Resources": [
+    {
+      "title": "Api Reference",
+      "slug": "api_reference"
+    },
+    {
+      "title": "Api Sdk Integration",
+      "slug": "api_sdk_integration"
+    },
+    {
+      "title": "Deployment Tools",
+      "slug": "deployment_tools"
+    },
+    {
+      "title": "Sdk Documentation",
+      "slug": "sdk_documentation"
+    },
+    {
+      "title": "Smart Contract Guide",
+      "slug": "smart_contract_guide"
+    },
+    {
+      "title": "Smart Contract Testing",
+      "slug": "smart_contract_testing"
+    },
+    {
+      "title": "Testing Frameworks",
+      "slug": "testing_frameworks"
+    }
+  ],
+  "Testnet-Resources": [
+    {
+      "title": "Api Test Scripts And Samples",
+      "slug": "api_test_scripts_and_samples"
+    },
+    {
+      "title": "Genesis Block Config",
+      "slug": "genesis_block_config"
+    },
+    {
+      "title": "Node Syncing Snapshot",
+      "slug": "node_syncing_snapshot"
+    },
+    {
+      "title": "Sample Testnet Transactions",
+      "slug": "sample_testnet_transactions"
+    },
+    {
+      "title": "Testnet Deployment Guide",
+      "slug": "testnet_deployment_guide"
+    },
+    {
+      "title": "Testnet Faucet Contract",
+      "slug": "testnet_faucet_contract"
+    },
+    {
+      "title": "Troubleshoot Testnet Deployment",
+      "slug": "troubleshoot_testnet_deployment"
+    }
+  ],
+  "Enterprise-&-Security": [
+    {
+      "title": "Bridge Node Operations",
+      "slug": "bridge_node_operations"
+    },
+    {
+      "title": "Enterprise Integration Api",
+      "slug": "enterprise_integration_api"
+    },
+    {
+      "title": "Liquidity Provision Cross Swap",
+      "slug": "liquidity_provision_cross_swap"
+    },
+    {
+      "title": "Quantum Security Deep Dive",
+      "slug": "quantum_security_deep_dive"
+    }
+  ],
+  "Whitepapers": [
+    {
+      "title": "Address Format Specification",
+      "slug": "address_format_specification"
+    },
+    {
+      "title": "Business Model Strategy",
+      "slug": "business_model_strategy"
+    },
+    {
+      "title": "Compliance Regulatory Framework",
+      "slug": "compliance_regulatory_framework"
+    },
+    {
+      "title": "Governance Dao Constitution",
+      "slug": "governance_dao_constitution"
+    },
+    {
+      "title": "Posy Technical Paper",
+      "slug": "posy_technical_paper"
+    },
+    {
+      "title": "Real World Use Playbook",
+      "slug": "real_world_use_playbook"
+    },
+    {
+      "title": "Synergy Tokenomics",
+      "slug": "synergy_tokenomics"
+    },
+    {
+      "title": "Use Case Whitepaper",
+      "slug": "use_case_whitepaper"
+    }
+  ]
+}

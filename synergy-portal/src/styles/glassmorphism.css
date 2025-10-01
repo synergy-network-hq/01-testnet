@@ -1,0 +1,228 @@
+* Glassmorphism styles */:root {
+  --rainbow-gradient: linear-gradient(60deg, #1399FF, #FF00C7, #FFD700, #00FFB3);
+}
+
+
+/* Glassmorphism styles */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card {
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-button,
+.wizard-btn,
+.glass-button,
+.chakra-button {
+  margin: 10px 0 12px 0;
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  padding: 10px;
+  text-decoration: none;
+  color: #ffffff9a;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 3px 0 rgba(209, 209, 209, 0.3);
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-shadow: 2px 2px 3px black;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+}
+
+.sidebar-button::before,
+.wizard-btn::before,
+.glass-button::before,
+.chakra-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 17px;
+  background: var(--rainbow-gradient);
+  opacity: 0;
+  transition: opacity 0.4s ease, border 0.4s ease;
+  z-index: -1;
+}
+
+.sidebar-button:hover::before,
+.wizard-btn:hover::before,
+.glass-button:hover::before,
+.chakra-button:hover::before {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.sidebar-button:after,
+.wizard-btn:after,
+.glass-button:after,
+.chakra-button:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .40), transparent);
+  transition: 0.5s;
+}
+
+.sidebar-button:active,
+.wizard-btn:active,
+.glass-button:active,
+.chakra-button:active {
+  box-shadow: 0 1px 0 rgba(209, 209, 209, 0.5);
+  transform: translateY(3px);
+}
+
+.sidebar-button:hover,
+.wizard-btn:hover,
+.glass-button:hover,
+.chakra-button:hover {
+  box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.7),
+    0 3px 0 rgba(209, 209, 209, 0.5);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 1);
+}
+
+.sidebar-button:active,
+.wizard-btn:active,
+.glass-button:active,
+.chakra-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.5),
+    0 1px 0 rgba(209, 209, 209, 0.5);
+}
+
+.sidebar-button:hover:after,
+.wizard-btn:hover:after,
+.glass-button:hover:after,
+.chakra-button:hover:after {
+  box-shadow: 0 3px 0 rgba(209, 209, 209, 0.5);
+  left: 100%;
+}
+
+.glass-nav {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-footer {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Add glow effects for interactive elements */
+.glow-effect {
+  position: relative;
+}
+
+.glow-effect::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #1399FF;
+  border-radius: 12px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-effect:hover::after {
+  opacity: 0.5;
+  filter: blur(15px);
+}
+
+/* Update the main content containers with glassmorphism */
+.content-container {
+  position: relative;
+  z-index: 1;
+}
+
+.glass-container {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.glass-container:hover {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Add subtle blue glow to interactive elements */
+.blue-glow {
+  box-shadow: 0 0 15px rgba(38, 112, 255, 0.5);
+}
+
+/* Enhance scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(38, 112, 255, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(38, 112, 255, 0.7);
+}
+
+/* Add animation for background parallax effect */
+@keyframes slowScroll {
+  from {
+    transform: translateZ(-1px) scale(2) translateY(0);
+  }
+
+  to {
+    transform: translateZ(-1px) scale(2) translateY(-20px);
+  }
+}
+
+.parallax-bg {
+  animation: slowScroll 20s infinite alternate linear;
+}

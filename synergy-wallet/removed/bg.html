@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synergy Wallet - Glassmorphism Sidebar</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(75deg, #000000, #0c0518, #0e051d);
+    }
+
+    .container {}
+
+    :root {
+      --rainbow-gradient: linear-gradient(45deg,
+          rgba(255, 0, 0, 0.3),
+          rgba(255, 165, 0, 0.3),
+          rgba(255, 255, 0, 0.3),
+          rgba(0, 128, 0, 0.3),
+          rgba(0, 0, 255, 0.3),
+          rgba(75, 0, 130, 0.3));
+    }
+
+    #backgroundGif {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255,0,255, 0.05);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 0;
+    }
+
+    .container {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      z-index: 0;
+    }
+
+    .sidebar {
+      width: 250px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-right: 2px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      color: #ffffff;
+      font-family: sans-serif;
+      position: relative;
+    }
+
+    .sidebar p {
+      margin: 5px;
+      padding: 0;
+      font-size: 14px;
+      color: #ffffff;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    .sidebar-logo {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      /* or any width that fits your design */
+      max-width: 170px;
+      /* prevent it from being too big */
+      opacity: 0.6;
+      /* faint so content is legible, adjust as needed */
+      z-index: 0;
+      /* behind everything else in sidebar */
+      pointer-events: none;
+      /* clicks go through the logo */
+    }
+
+    .sidebar-content {
+      position: relative;
+      z-index: 1;
+      /* on top of logo */
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0 0 0;
+    }
+
+    .sidebar-footer {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .sidebar hr {
+      width: 80%;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      margin: 12px 0 2px 0;
+    }
+
+    .sidebar h2 {
+      margin: 0 0 12px 0;
+      text-shadow: 2px 2px 2px black;
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffffff;
+      text-align: center;
+      line-height: 38px;
+      margin-top: 26px;
+      text-shadow: 2px 2px 3px black;
+    }
+
+
+    .content {
+      flex: 1;
+      height: 100%;
+      overflow-y: auto;
+      padding: 20px;
+      color: #ffffff;
+      font-family: sans-serif;
+    }
+
+    .section {
+      margin-bottom: 50px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: 0.3s;
+      text-shadow: 2px 2px 3px black;
+    }
+
+    .section:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .sidebar button {
+      margin: 10px 0 2px 0;
+      width: 85%;
+      position: relative;
+      border: 2px solid transparent;
+      border-radius: 15px;
+      padding: 8px 15px;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      box-shadow: 0 3px 0 rgba(209, 209, 209, 0.3);
+      transform: 0.2s ease;
+      text-shadow: 2px 2px 3px black;
+    }
+
+    .sidebar button::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: 17px;
+      background: var(--rainbow-gradient);
+      opacity: 0;
+      transition: opacity 0.4s ease, border 0.4s ease;
+      z-index: -1;
+    }
+
+    .sidebar button:hover::before {
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      opacity: 1;
+
+    }
+
+
+    .sidebar button:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .40), transparent);
+      transition: 0.5s;
+    }
+
+    .sidebar button:active {
+      box-shadow: 0 1px 0 rgba(209, 209, 209, 0.5);
+      transform: translateY(3px);
+    }
+
+    .sidebar button:hover {
+      box-shadow:
+        0 0 12px 4px rgba(255, 255, 255, 0.7),
+        0 3px 0 rgba(209, 209, 209, 0.5);
+    }
+
+    .sidebar button:active {
+      transform: translateY(2px);
+      box-shadow:
+        0 0 6px 2px rgba(255, 255, 255, 0.5),
+        0 1px 0 rgba(209, 209, 209, 0.5);
+    }
+
+    .sidebar button:hover:after {
+      box-shadow: 0 3px 0 rgba(209, 209, 209, 0.5);
+      left: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="overlay"></div>
+  <div class="container">
+    <div class="sidebar">
+      <img class="sidebar-logo" src="logo.png" alt="Synergy Wallet Logo" style="margin-bottom: 4px;">
+      <div class="sidebar-content">
+        <h2>Synergy Wallet<br>Dashboard</h2>
+        <hr>
+        <button class="button">Dashboard</button>
+        <button class="button">Transactions</button>
+        <button class="button">Settings</button>
+        <button class="button">Help</button>
+        <hr>
+      </div>
+      <div class="sidebar-footer">
+        <button class="button">Logout</button>
+        <p>Version 1.0.0</p>
+        <p>&copy; 2025 Synergy Network</p>
+      </div>
+    </div>
+    <div class="content">
+      <div id="section1" class="section">
+        <h2>Dashboard</h2>
+        <p>Overview of your Synergy Wallet balances, network status, and recent activity will appear here.</p>
+      </div>
+      <div id="section2" class="section">
+        <h2>Transactions</h2>
+        <p>View and manage your past transactions and pending transactions here.</p>
+      </div>
+      <div id="section3" class="section">
+        <h2>Settings</h2>
+        <p>Adjust your wallet preferences, network settings, and advanced configurations.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+vacuum
+kick
+two
+project
+faculty
+roast
+spare
+delay
+ski
+deliver
+service
+hill
+
+
+artist
+disagree
+rose
+turtle
+liar
+property
+vessel
+property
+solar
+lemon
+confirm
+symbol
+
+
+
+1
+ethics
+2
+rich
+3
+bargain
+4
+banana
+5
+educate
+6
+shed
+7
+exclude
+8
+nice
+9
+chat
+10
+tuna
+11
+youth
+12
+follow
+
+
+
+
+
+1.glance
+2.soft
+3.ramp
+4.giant
+5.kick
+6.spring
+7.approve
+8.gym
+9.shield
+10.maple
+11.man
+12.deposit
+.
+
+1.valley
+2.song
+3.share
+4.oval
+5.sketch
+6.output
+7.asset
+8.observe
+9.armed
+10.banana
+11.prison
+12.swallow
+
+
+
+1.spare
+2.sheriff
+3.dignity
+4.cushion
+5.power
+6.inch
+7.twelve
+8.leg
+9.scout
+10.wire
+11.little
+12.blood
+
+
+
+1.stock
+2.galaxy
+3.fence
+4.process
+5.account
+6.ketchup
+7.arena
+8.hotel
+9.vendor
+10.above
+11.false
+12.apple

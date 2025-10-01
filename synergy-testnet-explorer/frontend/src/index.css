@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+
+#root {
+  --gradient: linear-gradient(90deg, #ff00007b, #FF6F007b, #F1FF007b, #36F2007b, #1500FF7b, #9100FF7b);
+  --primary-color: #FF6F00;
+  --text-dark: #000;
+  --text-light: #fff;
+  --font-title: 'Inter', sans-serif;
+  --font-light: 'Inter', sans-serif;
+  z-index: -9999;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* 🌆 Background Styling */
+body {
+  background: url("../src/assets/metal.jpg") repeat, #252525;
+  background-size: 250px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+
+}
+
+/* 🔳 Semi-Transparent White Overlay */
+
+
+h1 {
+  color: white;
+}
+
+h2,
+h3 {
+  text-align: left;
+  margin: 2px 8px 18px 8px;
+}
+
+.navs {
+  z-index: 9999;
+  positiob: relative;
+}
+
+/* 🌌 General Page Layout */
+.app-container {
+  /* max-width: 1200px; */
+  margin: 75px 15px 0 280px;
+  padding: 30px 0 30px 30px;
+  font-family: "Inter", sans-serif;
+  color: white;
+  z-index: -15;
+  position: relative;
+}
+
+/* 🏠 Main Content Centering */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+/* 📊 Tables Section */
+.tables-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  gap: 10px;
+
+}
+
+@media (max-width: 900px) {
+  .tables-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* 🔍 Search Icon Styling */
+.search-bar .search-icon {
+  position: absolute;
+  right: 32px;
+  z-index: 9999;
+  /* Keep it inside the search bar */
+  color: black;
+  font-size: 24px;
+  margin-top: 3px;
+  margin-bottom: -2px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, transform 0.1s ease-out;
+}
+
+/* 🟡 Change to gradient on hover */
+/* 🟡 Change to gradient on hover */
+.search-bar .search-icon:hover {
+  background: linear-gradient(90deg,
+      #ff0000,
+      /* Red */
+      #ff6f00,
+      /* Orange */
+      #f1ff00,
+      /* Yellow */
+      #36f200,
+      /* Green */
+      #1500ff,
+      /* Blue */
+      #9100ff
+      /* Purple */
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🔄 Click Effect */
+.search-bar .search-icon:active {
+  transform: scale(0.9);
+  /* Shrinks on click */
+}

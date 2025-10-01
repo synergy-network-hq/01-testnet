@@ -1,0 +1,31 @@
+/* 📜 Table Styles */
+.table-container {
+  background: rgba(0, 0, 255, 0.1);
+  backdrop-filter: blur(3.5px);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  /* margin: auto; */
+  border: 1px solid white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+th {
+  color: #509cff;
+}
+
+td {
+  color: white;
+}

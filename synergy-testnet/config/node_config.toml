@@ -1,0 +1,22 @@
+[network]
+node_name = "synergy-testnet-node-1"
+listen_address = "0.0.0.0:30303"
+public_address = "127.0.0.1:30303"
+bootnodes = [
+    "enode://d18491c5a94ef758bd35a9d878fede923c351d77d3cfe6f19b0ec6d2e4d10e2bbfe6bc55d4b215f4b6a5cc46c91e34d0fcdfe70c3311f07a2c8d4fa2a8ce6a35@192.168.1.98:30303"
+]
+
+[consensus]
+algorithm = "PoSy"
+block_time_secs = 6
+max_validators = 21
+synergetic_mode = true
+
+[logging]
+log_level = "info"
+log_file = "logs/synergy-node.log"
+
+[rpc]
+http_port = 8545
+ws_port = 8546
+enable_cors = true

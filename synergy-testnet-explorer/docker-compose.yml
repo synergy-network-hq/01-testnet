@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: synergy_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: synergy_user
+      POSTGRES_PASSWORD: synergy_password
+      POSTGRES_DB: synergy_explorer
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: synergy_explorer_api
+    restart: always
+    command: ["./target/release/backend"]
+    environment:
+      DATABASE_URL: "postgresql://synergy_user:synergy_password@postgres:5432/synergy_explorer"
+    depends_on:
+      - postgres
+    ports:
+      - "8000:8000"
+
+volumes:
+  postgres_data:
