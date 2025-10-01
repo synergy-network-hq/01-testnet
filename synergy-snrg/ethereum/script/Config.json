@@ -1,0 +1,6 @@
+{
+  "treasuryMultisig": "0xc0f15e56f71ea8a77c6317ac8975f3bda9348872",
+  "timelock": "0xTBD_TIMELOCK",
+  "multisigOwner": "0x09d453AdE22A8b0Cd3A5f63A9394346aB994a106",
+  "stakingAprBps": 1200
+}

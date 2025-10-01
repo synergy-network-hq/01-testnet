@@ -1,0 +1,10 @@
+sequenceDiagram
+participant User
+participant Staking
+participant Token
+
+User->>Token: approve(Staking, amt)
+User->>Staking: stake(amt)
+Staking->>Token: transferFrom(User, Staking, amt)
+User->>Staking: claim()/unstake()
+Staking->>Token: transfer(User, rewards/amt)

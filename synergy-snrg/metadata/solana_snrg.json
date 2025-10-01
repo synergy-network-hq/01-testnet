@@ -1,0 +1,32 @@
+{
+  "name": "Synergy Presale Coin",
+  "symbol": "SNRG",
+  "description": "Locked presale token for the Synergy Network on Solana. Non-transferable; only staking, swap, and opt-in timelocked rescue.",
+  "image": "https://synergy-network.io/assets/snrg.png",
+  "seller_fee_basis_points": 0,
+  "external_url": "https://synergy-network.io",
+  "attributes": [
+    {
+      "trait_type": "Transferability",
+      "value": "Non-transferable"
+    },
+    {
+      "trait_type": "Use",
+      "value": "Presale, Staking, Swap"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://synergy-network.io/assets/snrg.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "Fmj2XuvBSXGeL5zK8XD4yDimwv3KWq1tHuCYqnUF8FRx",
+        "share": 100
+      }
+    ]
+  }
+}

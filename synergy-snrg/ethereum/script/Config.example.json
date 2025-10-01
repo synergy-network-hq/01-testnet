@@ -1,0 +1,6 @@
+{
+  "treasuryMultisig": "0xTBD_TREASURY",
+  "timelock": "0xTBD_TIMELOCK",
+  "multisigOwner": "0xTBD_MULTISIG",
+  "stakingAprBps": 1200
+}

@@ -1,0 +1,10 @@
+sequenceDiagram
+participant User
+participant Swap
+participant Token
+
+User->>Token: approve(Swap, amt)
+User->>Swap: burnForReceipt(amt)
+Swap->>Token: burnFrom(User, amt)
+Swap-->>User: Burned event
+Note over Swap: finalize -> publish Merkle root

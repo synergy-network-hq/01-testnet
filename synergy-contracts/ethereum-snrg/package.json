@@ -1,0 +1,22 @@
+{
+  "name": "ethereum-snrg",
+  "version": "1.0.0",
+  "description": "Synergy Coin Ethereum Smart Contracts",
+  "type": "module",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js",
+    "node": "hardhat node",
+    "console": "hardhat console",
+    "clean": "hardhat clean"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "hardhat": "^2.26.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.0",
+    "dotenv": "^17.2.3"
+  }
+}

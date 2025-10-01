@@ -1,0 +1,42 @@
+{
+  "name": "Synergy Presale Coin",
+  "symbol": "SNRG",
+  "standard": "ERC-20 (Permit)",
+  "decimals": 9,
+  "supply": "6000000000",
+  "website": "https://synergy-network.io",
+  "description": "Locked presale token for the Synergy Network. Non-transferable by default; only staking, swap, and an opt-in timelocked self-rescue path are permitted.",
+  "image": "https://synergy-network.io/assets/snrg.png",
+  "whitepaper": "https://synergy-network.io/whitepaper.pdf",
+  "socials": {
+    "x": "https://x.com/SynergyNetHQ",
+    "discord": "https://discord.gg/tdR3G4Dv",
+    "github": "https://github.com/synergy-network-hq"
+  },
+  "disclaimers": [
+    "SNRG is a locked presale instrument; not a tradable token.",
+    "No transfer allowed except staking, swap, and matured self-rescue as documented."
+  ],
+  "links": {
+    "docs": "https://synergy-network.io/docs"
+  },
+  "tags": [
+    "presale",
+    "staking",
+    "swap",
+    "non-transferable",
+    "timelock"
+  ],
+  "extensions": {
+    "treasury_multisig": "0xc0f15e56f71ea8a77c6317ac8975f3bda9348872",
+    "timelock": "0xTBD_TIMELOCK",
+    "staking_contract": "0xTBD_STAKING",
+    "swap_contract": "0xTBD_SWAP",
+    "rescue_registry": "0xTBD_RESCUE",
+    "audit_targets": [
+      "slither",
+      "foundry",
+      "echidna"
+    ]
+  }
+}

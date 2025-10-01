@@ -1,0 +1,19 @@
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+snrg_token = "SNRGt0ken111111111111111111111111111111111"
+snrg_staking = "SNRGstak111111111111111111111111111111111"
+snrg_presale = "SNRGpres111111111111111111111111111111111"
+snrg_swap = "SNRGswap111111111111111111111111111111111"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "Localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "node tests/run.js"

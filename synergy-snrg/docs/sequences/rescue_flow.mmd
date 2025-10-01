@@ -1,0 +1,11 @@
+sequenceDiagram
+participant User
+participant Registry
+participant Token
+
+User->>Registry: registerPlan(recovery, delay)
+User->>Registry: initiateRescue()
+Note over Registry: ETA = now + delay
+Registry->>Registry: after ETA anyone executes
+Registry->>Token: transferFrom(User, recovery, balance)
+Token-->>Registry: success

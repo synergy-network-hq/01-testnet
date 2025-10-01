@@ -1,0 +1,10 @@
+sequenceDiagram
+participant User
+participant Presale
+participant Treasury
+participant Token
+
+User->>Presale: buy() payable
+Presale->>Token: transferFrom(Treasury, User, amount)
+Presale->>Treasury: forward ETH
+Presale-->>User: Purchased event

@@ -1,0 +1,61 @@
+{
+    "name": "Synergy Coin",
+    "symbol": "SNRG",
+    "description": "Locked presale token redeemable 1:1 for native SNRG on Synergy Network mainnet.",
+    "image": "https://gateway.pinata.cloud/ipfs/bafybeicx3zmdbjkabhbf6eqhrsswqua3zmagugf7dmhavinzkmxz7pj3qu",
+    "external_url": "https://synergy-network.io",
+    "seller_fee_basis_points": 0,
+    "attributes": [
+        {
+            "trait_type": "Token Type",
+            "value": "Presale Token"
+        },
+        {
+            "trait_type": "State",
+            "value": "Locked"
+        },
+        {
+            "trait_type": "Redeemable For",
+            "value": "Synergy Coin (SNRG) Mainnet"
+        },
+        {
+            "trait_type": "Swap Mechanism",
+            "value": "1:1 swap at Synergy Network mainnet launch"
+        },
+        {
+            "trait_type": "Chain",
+            "value": "Solana"
+        },
+        {
+            "trait_type": "Future Native Chain",
+            "value": "Synergy Network"
+        },
+        {
+            "trait_type": "Blockchain",
+            "value": "Synergy Network"
+        },
+        {
+            "trait_type": "Max Supply",
+            "value": "6,000,000,000"
+        },
+        {
+            "trait_type": "Decimals",
+            "value": "9"
+        }
+    ],
+    "properties": {
+        "files": [
+            {
+                "uri": "https://gateway.pinata.cloud/ipfs/bafybeicx3zmdbjkabhbf6eqhrsswqua3zmagugf7dmhavinzkmxz7pj3qu",
+                "type": "image/png"
+            }
+        ],
+        "category": "token",
+        "creators": [
+            {
+                "address": "sYnU1vclq9mks3t2p7l5xhgm9dpn3zqwdyl7f4p9syw5",
+                "share": 100
+            }
+        ]
+    }
+}
